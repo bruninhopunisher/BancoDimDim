@@ -1,0 +1,37 @@
+.servico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+}
+
+#cards {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+    margin-top: 22px;
+    margin: auto;
+}
+
+ .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    width: 20%;
+    padding: 15px;
+    background-color: #ffe8ba;
+    box-shadow: 0px 0px 12px 4px #a4a0641a;
+    position: relative;
+    overflow: hidden;
+} 
+
+
+
+.card-description {
+    color: white;
+    text-align: center;
+}

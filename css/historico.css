@@ -1,0 +1,47 @@
+body {
+    margin: 10;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section.conta {
+    display: block;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    margin: auto 0;
+}
+
+section.conta p.poupanca{
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10PX;
+    font-size: 20px;
+}
+
+section.conta p.poupanca span.total{
+    font-size: 25px;
+} 
+
+ul.history{
+    display: flex;
+    flex-direction: column;
+}
+
+ul.history li{
+    list-style: none;
+    border-bottom: solid 1px #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+span.transacaoPos{
+    color: green;
+}
+
+span.transacaoNeg{
+    color: red;
+}
