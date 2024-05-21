@@ -11,8 +11,9 @@
     width: 100%;
     display: flex;
     gap: 14px;
-    margin-top: 22px;
-    margin: auto;
+    margin-left: 15%;
+    
+    flex-wrap: wrap;
 }
 
  .card {

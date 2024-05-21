@@ -4,44 +4,95 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-section.conta {
-    display: block;
-    width: 90%;
-    height: 100%;
+
+
+ /* #f4f4f4; */
+
+
+#historicoTransacoes {
     padding: 20px;
-    margin: auto 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
 }
 
-section.conta p.poupanca{
-    border: solid 1px;
+section.conta {
+    margin-bottom: 20px;
+}
+
+section.conta p.poupanca {
+    border: solid 1px #ccc;
     padding: 20px;
     border-radius: 5px;
-    margin: 10PX;
+    background-color: #e7f3ff;
     font-size: 20px;
+    text-align: center;
 }
 
-section.conta p.poupanca span.total{
+section.conta p.poupanca span.total {
     font-size: 25px;
-} 
-
-ul.history{
-    display: flex;
-    flex-direction: column;
+    font-weight: bold;
 }
 
-ul.history li{
+ul.history {
     list-style: none;
-    border-bottom: solid 1px #ccc;
+    padding: 0;
+}
+
+ul.history li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid 1px #ccc;
     padding: 10px 0;
 }
 
-span.transacaoPos{
+ul.history li:last-child {
+    border-bottom: none;
+}
+
+span.transacaoPos {
     color: green;
 }
 
-span.transacaoNeg{
+span.transacaoNeg {
     color: red;
+}
+
+#form-transacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-transacoes input, #form-transacoes button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#form-transacoes input:focus, #form-transacoes button:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+#form-transacoes button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-transacoes button:hover {
+    background-color: #0056b3;
 }
