@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci minha senha - Banco Digital</title>
+    <link rel="stylesheet" href="css/esqueci_senha.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Recuperar Senha</h1>
+            <form id="esqueciSenhaForm">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Enviar</button>
+                <div class="options">
+                    <a href="login.html">Voltar ao login</a>
+                </div>
+                <p id="mensagem-sucesso" style="color: green; display: none;">E-mail de recuperação enviado!</p>
+            </form>
+        </div>
+    </div>
+    <script src="js/esqueci_senha.js"></script>
+</body>
+</html>
