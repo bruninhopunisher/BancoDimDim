@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix - Banco Digital</title>
+    <link rel="stylesheet" href="css/pix.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <button class="close-btn" id="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Transferências</a></li>
+                <li><a href="#">Pagamentos</a></li>
+                <li><a href="pix.html">Pix</a></li>
+                <li><a href="#">Cartões</a></li>
+                <li><a href="#">Empréstimos</a></li>
+                <li><a href="#">Investimentos</a></li>
+                <li><a href="#">Open Finance</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header>
+                <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <h1>Pix</h1>
+            </header>
+            <section class="pix-options">
+                <h2>Escolha o Tipo de Transferência Pix</h2>
+                <form id="pix-form">
+                    <label for="transfer-type">Tipo de Transferência:</label>
+                    <select id="transfer-type" name="transfer-type" onchange="showFields()">
+                        <option value="default">Selecione...</option>
+                        <option value="imediato">Imediato</option>
+                        <option value="agendada">Agendada</option>
+                    </select>
+                    <div id="additional-fields"></div>
+                    <label for="chave-pix">Chave Pix:</label>
+                    <input type="text" id="chave-pix" name="chave-pix">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="js/pix.js"></script>
+</body>
+</html>
