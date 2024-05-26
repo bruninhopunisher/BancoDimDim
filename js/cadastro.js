@@ -32,6 +32,8 @@ document.getElementById('validateButton').addEventListener('click', function () 
 
     errorMessage.style.display = 'none';
     alert('Informações validadas com sucesso!');
+
+    document.getElementById("myForm").submit();
 });
 
 document.getElementById('registrationForm').addEventListener('submit', function (event) {

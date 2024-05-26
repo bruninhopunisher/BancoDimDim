@@ -9,28 +9,28 @@
 <body>
     <div class="login-container">
         <form action="" method="post">
-            <h2>Cadastro</h2>
-
+            <h2 style="color: black;">Cadastro</h2>
+            <br>
                 <div class="input-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
+                <br>
                 <div class="input-group">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
+                <br>
                 <div class="input-group">
                     <label for="password">Senha:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                
+                <br>
                 <div class="input-group">
                     <label for="confirmPassword">Confirmação de Senha</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
-
+                <br>
                 <div class="input-group">
                     <label for="documentType">Tipo de Documento</label>
                     <select id="documentType" name="documentType" required>
@@ -38,26 +38,27 @@
                         <option value="cnpj">CNPJ</option>
                     </select>
                 </div> 
-
+                <br>
                 <div class="input-group">
                     <label for="document">CPF/CNPJ</label>
                     <input type="text" id="document" name="document" required>
                 </div>
-
+                <br>
                 <div class="gender">
-                    <label>Sexo</label>
+                    <label style="font-weight: bold;">Sexo</label>
+                    <br><br>
                     <div class="radio-group">
                         <label><input type="radio" name="gender" value="male" required> Masculino</label>
                         <label><input type="radio" name="gender" value="female" required> Feminino</label>
                     </div>
+                    <br>
                 </div>
-
                 <button type="button" id="validateButton">Validar Informações</button>
-                <button type="submit">Enviar</button>
                 <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
 
                 <div class="options">
-                    <a href="login.html">Já tenho uma conta</a>
+                    <a href="login.html" style="color: black;">Já tenho uma conta</a>
                 <p id="error-message" style="color: red; display: none;">Erro na validação, por favor verifique os campos.</p>
                 </div>
             
