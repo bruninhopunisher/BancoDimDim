@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
+    <h1>Olá,Usario</h1>
+
+    <div id="historicoTransacoes">
+        <section class="conta">
+            <p class="poupanca"><span id="total_val" class="total"></span><br><span>Saldo Disponivel</span></p>
+
+        <ul class="history">
+         
+        </ul>
+        </section>
+    </div>
+
     <div class="container">
         <nav class="sidebar" id="sidebar">
             <button class="close-btn" id="close-btn" onclick="toggleMenu()">×</button>
@@ -20,7 +32,7 @@
                 <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
                     &#9776;
                 </div>
-                <h1>Home Page</h1>
+
             </header>
             <section class="links">
                 <div class="link-item"><a href="#">Transferências e Pagamentos</a></div>
@@ -32,5 +44,19 @@
         </main>
     </div>
     <script src="js/home_page.js"></script>
+    <script src="js/saldo.js"></script>
+
+    <br>
+    <div id="card">
+        <h2>Meus Cartões</h2>
+    </div>
+    
+   <BR>
+    <div id="fatura">
+        <h2>cartão de crédito</h2>
+        <h3>Fatura atual</h3>
+        <p>R$ 500,00</p>
+        <p>Limite Disponivel de: 133</p>
+    </div>
 </body>
 </html>

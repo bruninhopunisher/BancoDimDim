@@ -15,6 +15,7 @@ a {
   color: #e7e7e7;
   text-decoration: none;
   font-family: sans-serif;
+
 }
 
 a:hover {
@@ -66,6 +67,9 @@ main section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 50px 0;
+  margin-left: 50px; 
+  margin-right: 50px; 
 }
 
 .main-text h1 {
@@ -106,4 +110,26 @@ main section {
 
 .main-text .btn:hover {
   opacity: .85;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-text h1 {
+    padding: 50px 0 0 0;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+
+  .main-text h2 {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .main-img img {
+    margin-right: 20px;
+  }
+
+  .main-text .btn {
+    margin-left: 20px;
+  }
 }

@@ -12,27 +12,45 @@
     display: flex;
     gap: 14px;
     margin-left: 15%;
-    
     flex-wrap: wrap;
 }
 
  .card {
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    gap: 18px;
+    gap: 10px;
     width: 20%;
-    padding: 15px;
+    padding: 5px;
     background-color: #ffe8ba;
     box-shadow: 0px 0px 12px 4px #a4a0641a;
     position: relative;
     overflow: hidden;
 } 
 
-
-
 .card-description {
     color: white;
     text-align: center;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    #cards {
+        margin-left: 0;
+    }
+
+    .card {
+        width: 80%;
+    }
 }
