@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos e Investimentos - Banco Digital</title>
+    <link rel="stylesheet" href="css/espresti_invest.css">
+</head>
+<body>
+    <div class="loan-investment-container">
+        <h2>Empréstimos e Investimentos</h2>
+        <form id="loan-investment-form">
+            <div class="input-group">
+                <label for="loan-amount">Valor do Empréstimo:</label>
+                <input type="text" id="loan-amount" placeholder="Insira o valor desejado" required>
+            </div>
+            <div class="input-group">
+                <label for="loan-term">Prazo do Empréstimo:</label>
+                <input type="text" id="loan-term" placeholder="Insira o prazo em meses" required>
+            </div>
+            <div class="input-group">
+                <label for="investment-amount">Valor do Investimento:</label>
+                <input type="text" id="investment-amount" placeholder="Insira o valor desejado" required>
+            </div>
+            <div class="input-group">
+                <label for="investment-term">Prazo do Investimento:</label>
+                <input type="text" id="investment-term" placeholder="Insira o prazo em meses" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="form-message"></p>
+    </div>
+    <script src="js/empresti_invest.js"></script>
+</body>
+</html>

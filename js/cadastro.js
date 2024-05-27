@@ -12,28 +12,32 @@ document.getElementById('validateButton').addEventListener('click', function () 
 
     if (!validateEmail(email)) {
         showError('E-mail inválido.');
+        alert('E-mail inválido.');
         return;
     }
 
     if (password !== confirmPassword) {
         showError('As senhas não iguais.');
+        alert('As senhas não iguais.');
         return;
     }
 
     if (documentType === 'cpf' && !validateCPF(documentValue)) {
         showError('CPF inválido.');
+        alert('CPF inválido.');
         return;
     }
 
     if (documentType === 'cnpj' && !validateCNPJ(documentValue)) {
         showError('CNPJ inválido.');
+        alert('CNPJ inválido.');
         return;
     }
 
     errorMessage.style.display = 'none';
     alert('Informações validadas com sucesso!');
 
-    document.getElementById("myForm").submit();
+    window.location.href = "home_page.html";
 });
 
 document.getElementById('registrationForm').addEventListener('submit', function (event) {
