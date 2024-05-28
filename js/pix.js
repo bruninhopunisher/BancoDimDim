@@ -128,7 +128,7 @@ document.getElementById('pix-form').addEventListener('submit', function(event) {
     if (isValid) {
         setTimeout(function() {
             alert('Pix efetuado com sucesso!');
-            window.location.href = 'sucesso.html';
+            window.location.href = 'transfe_realiza.html';
         }, 2000);
     }
 });

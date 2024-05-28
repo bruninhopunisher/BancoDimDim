@@ -8,7 +8,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 83vh;
 }
 
 .main-content {
@@ -91,12 +91,11 @@ body {
 }
 
 footer {
-    margin: 0;
-    background-color: black;
+    background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: absolute;
+    padding: 10px 0;
     bottom: 0;
     width: 100%;
-}
+  }
+  
