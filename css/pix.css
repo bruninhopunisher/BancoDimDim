@@ -1,7 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffe8ba, black);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .main-content {
     flex: 1;
     padding: 20px;
-    margin-left: 50px; 
+    margin-left: 50px;
 }
 
 .main-content header {
@@ -27,13 +40,11 @@
 .pix-options {
     max-width: 650px;
     padding: 28px;
-    margin: 0 20px;
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
-
 
 .pix-options h2 {
     font-size: 26px;
@@ -51,12 +62,14 @@
 }
 
 .pix-options label {
-    width: 95%;
+    width: 100%;
     color: black;
     font-weight: bold;
 }
 
-.pix-options label, .pix-options select, .pix-options button {
+.pix-options label,
+.pix-options select,
+.pix-options button {
     margin-bottom: 10px;
 }
 
@@ -64,7 +77,6 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    display: block;
     font-size: 20px;
     color: #fff;
     border: none;
@@ -75,55 +87,16 @@
 }
 
 .pix-options button:hover {
-    opacity: .85;
+    opacity: 0.85;
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-    }
-
-    .menu-icon {
-        left: 10px;
-    }
-
-    .pix-options {
-        margin: 0;
-    }
-
-    .pix-options h2 {
-        font-size: 22px;
-    }
-
-    .pix-options button {
-        font-size: 18px;
-    }
-
-    .pix-options form {
-        padding-bottom: 10px;
-    }
-
-    .pix-options label {
-        width: 100%;
-    }
-
-    .pix-options button {
-        padding: 8px;
-    }
-
-    #historicoTransacoes {
-        margin: 20px 0;
-    }
-
-    #historicoTransacoes h2 {
-        font-size: 22px;
-    }
-
-    #historicoTransacoes p {
-        font-size: 18px;
-    }
-
-    #historicoTransacoes p span {
-        font-size: 20px;
-    }
+footer {
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
