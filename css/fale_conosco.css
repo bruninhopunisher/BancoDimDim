@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe8ba, black);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+}
+
+header.menu a.logo img {
+    width: 90px;
+}
+
+header.menu nav ul.menu-dim,
+header.menu ul.login {
+    display: flex;
+    list-style: none;
+}
+
+header.menu nav ul.menu-dim li,
+header.menu ul.login li {
+    margin-left: 20px;
+}
+
+header.menu nav ul.menu-dim li a,
+header.menu ul.login li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header.menu nav ul.menu-dim li a:hover,
+header.menu ul.login li a:hover {
+    color: #e9a209;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: white;
+    color: black;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    background: #e9a209;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cf8d08;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-logo img {
+    width: 90px;
+}
+
+.footer-text p {
+    margin-left: 20px;
+}
