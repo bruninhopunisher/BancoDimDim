@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById('loan-investment-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
