@@ -10,9 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(135deg, #ffe8ba, black);
     color: #333;
-    font-family: Arial, sans-serif;
 }
 
 /* Estilos para o botão de toggle do menu */
