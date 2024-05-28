@@ -37,7 +37,7 @@ document.getElementById('validateButton').addEventListener('click', function () 
     errorMessage.style.display = 'none';
     alert('Informações validadas com sucesso!');
 
-    window.location.href = "home_page.html";
+    window.location.href = "login.html";
 });
 
 document.getElementById('registrationForm').addEventListener('submit', function (event) {

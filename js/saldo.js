@@ -34,7 +34,7 @@ const transacoes = [
   const item = document.createElement('li'); 
   item.innerHTML = 
   `<span>${descricao}<br>${data}</span>
-    <span class="transacao${valor < 0 ? 'Neg' : 'Pos'}">$ ${valor}</span> `;
+    <span class="transacao${valor < 0 ? 'Neg' : 'Pos'}"> R$ ${valor}</span> `;
     
     lista.appendChild(item);
 }  
@@ -50,7 +50,7 @@ function calcularTotal() {
 function atualizarValorTotal() {
     const total = calcularTotal();
     const totalElement = document.getElementById('total_val');
-    totalElement.textContent = `$ ${total}`;
+    totalElement.textContent = `R$ ${total},00`;
 }
 
 

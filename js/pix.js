@@ -11,7 +11,7 @@ function showFields() {
 
     additionalFields.innerHTML = '';
 
-    if (transferType === 'imediato') {
+    if (transferType === 'imediato' || transferType === 'via-chave') {
         additionalFields.innerHTML = `
             <label for="chave">Tipo de Chave:</label>
             <select id="chave" name="chave">
@@ -19,7 +19,9 @@ function showFields() {
                 <option value="cnpj">CNPJ</option>
                 <option value="telefone">Telefone</option>
                 <option value="email">Email</option>
-            </select>`;
+            </select>
+            <label for="chave-pix">Chave Pix:</label>
+            <input type="text" id="chave-pix" name="chave-pix" required>`;
     } else if (transferType === 'agendada') {
         additionalFields.innerHTML = `
             <label for="chave">Tipo de Chave:</label>
@@ -29,10 +31,13 @@ function showFields() {
                 <option value="telefone">Telefone</option>
                 <option value="email">Email</option>
             </select>
+            <label for="chave-pix">Chave Pix:</label>
+            <input type="text" id="chave-pix" name="chave-pix" required>
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" required>`;
     } else if (transferType === 'qr-code') {
-        additionalFields.innerHTML = `<p>Transferência por QR Code não está disponível na web.</p>`;
+        additionalFields.innerHTML = `
+            <p>QR Code não está disponível na web.</p>`;
     }
 }
 
@@ -42,7 +47,7 @@ function validarEmail(email) {
 }
 
 function validarCPF(cpf) {
-    cpf = cpf.replace(/[^\d]+/g,'');
+    cpf = cpf.replace(/[^\d]+/g, '');
     if (cpf.length !== 11) return false;
     if (/^(\d)\1{10}$/.test(cpf)) return false;
 
@@ -66,7 +71,7 @@ function validarCPF(cpf) {
 }
 
 function validarCNPJ(cnpj) {
-    cnpj = cnpj.replace(/[^\d]+/g,'');
+    cnpj = cnpj.replace(/[^\d]+/g, '');
     if (cnpj.length !== 14) return false;
     if (/^(\d)\1{13}$/.test(cnpj)) return false;
 
@@ -97,37 +102,33 @@ function validarCNPJ(cnpj) {
 }
 
 document.getElementById('pix-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
     const chavePix = document.getElementById('chave-pix').value.trim();
     const tipoChave = document.getElementById('chave').value;
     const data = document.getElementById('data');
-    const email = document.getElementById('email');
-    const cpf = document.getElementById('cpf');
-    const cnpj = document.getElementById('cnpj');
+    let isValid = true;
 
-    if (tipoChave === 'email') {
-        if (!validarEmail(chavePix)) {
-            alert('O email inserido é inválido.');
-            event.preventDefault();
-        }
-    } else if (tipoChave === 'cpf') {
-        if (!validarCPF(chavePix)) {
-            alert('O CPF inserido é inválido.');
-            event.preventDefault();
-        }
-    } else if (tipoChave === 'cnpj') {
-        if (!validarCNPJ(chavePix)) {
-            alert('O CNPJ inserido é inválido.');
-            event.preventDefault();
-        }
+    if (tipoChave === 'email' && !validarEmail(chavePix)) {
+        alert('O email inserido é inválido.');
+        isValid = false;
+    } else if (tipoChave === 'cpf' && !validarCPF(chavePix)) {
+        alert('O CPF inserido é inválido.');
+        isValid = false;
+    } else if (tipoChave === 'cnpj' && !validarCNPJ(chavePix)) {
+        alert('O CNPJ inserido é inválido.');
+        isValid = false;
     }
 
     if (data && data.value === '') {
         alert('Por favor, selecione uma data.');
-        event.preventDefault();
+        isValid = false;
     }
 
-    setTimeout(function() {
-        window.open = "home_page.html";
-    }, 2000);
+    if (isValid) {
+        setTimeout(function() {
+            alert('Pix efetuado com sucesso!');
+            window.location.href = 'sucesso.html';
+        }, 2000);
+    }
 });
-

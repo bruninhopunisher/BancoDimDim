@@ -43,3 +43,20 @@ p {
     max-width: 100%;
     border-radius: 10px;
 }
+
+.options {
+    margin-top: 10px;
+    display: flex;
+    font-size: 14px;
+}
+
+.options a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #ffe8ba;
+}
