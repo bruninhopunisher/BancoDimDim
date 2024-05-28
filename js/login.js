@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -11,10 +9,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const defaultPassword = 'user123';
 
     if (username === defaultUsername && password === defaultPassword) {
-        // Redireciona para a página inicial
         window.location.href = 'home_page.html';
     } else {
-        // Mostra a mensagem de erro
         errorMessage.style.display = 'block';
     }
 });
