@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (username === defaultUsername && password === defaultPassword) {
         // Redireciona para a página inicial
-        window.location.href = 'cadastro.html';
+        window.location.href = 'home_page.html';
     } else {
         // Mostra a mensagem de erro
         errorMessage.style.display = 'block';

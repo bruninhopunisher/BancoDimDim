@@ -2,12 +2,12 @@
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #4a90e2, #50a7e2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(135deg,#ffe8ba, black);
 }
 
 .login-container {
@@ -54,13 +54,13 @@ body {
 button {
     width: 100%;
     padding: 10px;
-    background: #4a90e2;
+    background: #e9a209;
     border: none;
-    border-radius: 4px;
-    color: #fff;
+    border-radius: 20px;
+    color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.5s;
 }
 
 button:hover {
@@ -75,11 +75,11 @@ button:hover {
 }
 
 .options a {
-    color: #4a90e2;
+    color: black;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .options a:hover {
-    color: #357ab9;
+    color: #ffe8ba;
 }
