@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById('loan-investment-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -9,7 +7,6 @@ document.getElementById('loan-investment-form').addEventListener('submit', funct
     const investmentTerm = document.getElementById('investment-term').value.trim();
     const formMessage = document.getElementById('form-message');
 
-    // Validações simples
     if (!loanAmount || isNaN(loanAmount) || loanAmount <= 0) {
         formMessage.textContent = 'Por favor, insira um valor de empréstimo válido.';
         return;
@@ -30,12 +27,10 @@ document.getElementById('loan-investment-form').addEventListener('submit', funct
         return;
     }
 
-    // Simulação de envio bem-sucedido do formulário
     formMessage.style.color = 'green';
     formMessage.textContent = 'Formulário enviado com sucesso! Redirecionando...';
 
-    // Redirecionar para a página desejada após um tempo (2 segundos neste exemplo)
     setTimeout(function() {
-        window.location.href = "sucesso.html"; // Substitua "success.html" pelo caminho correto
+        window.location.href = "sucesso.html";
     }, 2000);
 });
